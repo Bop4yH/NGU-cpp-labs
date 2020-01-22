@@ -1,0 +1,32 @@
+//
+// Created by Александр on 12.12.2019.
+//
+
+#ifndef LAB2_PARSER_H
+#define LAB2_PARSER_H
+
+
+#include <cstdio>
+#include <string>
+#include <map>
+#include <vector>
+#include <fstream>
+#include <iterator>
+#include <sstream>
+
+using namespace std;
+typedef map<string, pair<string, vector<string>>> WorkFTable;
+class Parser {
+private:
+    WorkFTable table;
+    vector<string> order;
+
+    bool is_number(const string &s);
+public:
+
+    void parse(string &path);
+    WorkFTable getTable();
+    vector<string> getOrder();
+};
+
+#endif //LAB2_PARSER_H
