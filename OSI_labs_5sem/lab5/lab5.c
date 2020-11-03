@@ -20,6 +20,7 @@ void *child_body(void* arg) {
 
     while(1) {
         write(0, "child\n", 6);
+        usleep(200000);
     }
 
     pthread_cleanup_pop(0);
